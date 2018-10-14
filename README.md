@@ -31,6 +31,8 @@ Each set of two cards that you click count as one move. The ratings are calculat
 There are no external dependencies needed to enjoy this game - all necessary JavaScript and CSS is included in the zipped folder you download.
 
 
+
+
 I hope you enjoy the game and have fun!
 
 Tom
