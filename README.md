@@ -17,7 +17,7 @@
 
 Click on any two cards with your mouse pointer, and they will turn over. If they aren't a match, they will shake and turn red. If they are a match, they'll pulsate and turn green. Try and find all 8 matching pairs as quickly as you can! 
 
-If you want to start again, you can at any point, by clicking the reset button (![Reset button image](https://raw.githubusercontent.com/tomastephenson/Udacity-Assignment-2-Matching-Game/master/img/reset.png | width=40)
+If you want to start again, you can at any point, by clicking the reset button (![Reset button image](https://raw.githubusercontent.com/tomastephenson/Udacity-Assignment-2-Matching-Game/master/img/reset.png){:height="700px" width="400px"}
 ) on the top-right of the board.
 
 ## Star Rating
