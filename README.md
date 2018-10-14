@@ -5,6 +5,7 @@
 * [Installation Instructions](#installation-instructions)
 * [How To Play](#how-to-play)
 * [Star Rating](#star-rating)
+* [Dependencies](#dependencies)
 
 ## Installation Instructions
 
@@ -25,6 +26,10 @@ Each set of two cards that you click count as one move. The ratings are calculat
 * **3 stars** - Find all 8 matches in just 10 moves or less (VERY difficult!)
 * **2 stars** - Find all 8 matches in 20 moves or less
 * **1 star** - Find all 8 matches in 30 moves or less
+
+## Dependencies
+There are no external dependencies needed to enjoy this game - all necessary JavaScript and CSS is included in the zipped folder you download.
+
 
 I hope you enjoy the game and have fun!
 
