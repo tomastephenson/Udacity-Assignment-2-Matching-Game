@@ -1,0 +1,297 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png');
+    /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+
+.deck .card.no-match {
+    cursor: default;
+    background: #c64545;
+    font-size: 33px;
+}
+
+
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.breaker {
+    padding-left: 15px;
+}
+
+
+
+/* 
+CSS Classes for animations 
+*/
+
+
+/* shake-horizontal animation from animista.com */
+
+.shake-horizontal {
+    -webkit-animation: shake-horizontal 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-horizontal 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50%,
+    70% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+    40%,
+    60% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+    80% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    90% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+}
+
+@keyframes shake-horizontal {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    50%,
+    70% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+    60% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+    80% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+    }
+    90% {
+        -webkit-transform: translateX(-6px);
+        transform: translateX(-6px);
+    }
+}
+
+
+
+/* pulsate-fwd animation from animista.com */
+
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 1s ease-in-out 2 both;
+    animation: pulsate-fwd 1s ease-in-out 2 both;
+}
+
+
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+
+/* Modal Styling from https://docs.google.com/document/d/1X40VZg-QeR9Smsq5ec7wUPmX04yFSPirEKKHS5zYOYM/edit */
+
+#container {
+    margin: 0 auto;
+    width: 80%;
+    font-family: verdana, arial, sans-serif;
+    font-size: 16px;
+}
+
+#modalWindow {
+    position: fixed;
+    font-family: arial, helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 99999;
+    opacity: 0;
+    transition: opacity 400ms linear;
+    pointer-events: none;
+}
+
+#modalWindow:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#modalWindow>div {
+    text-align: center;
+    width: 400px;
+    height: 190px;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px 20px 13px 20px;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    background: #FEFEFE;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+#modalWindow>#close-button {
+    text-align: right;
+}
+
+.button {
+    color: #FFFFFF;
+    background-color: #232323;
+    border-color: #FFFFFF;
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 40px;
+    margin: 0;
+    display: inline-block;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+}
