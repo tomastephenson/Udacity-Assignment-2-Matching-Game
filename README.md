@@ -12,7 +12,7 @@
 * Click on index.html to play!
 
 ## How To Play
-![]('img/Board.png')
+![Image of the Memory Game board](https://raw.githubusercontent.com/tomastephenson/Udacity-Assignment-2-Matching-Game/master/img/board.png)
 
 Turn over 2 cards at a time and try and find the 8 matching pairs. To get the highest possible star rating, try to find all 8 matches in just 10 moves!
 
