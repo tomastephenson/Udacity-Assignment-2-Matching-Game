@@ -150,7 +150,7 @@ function noMatch(i) {
 
 // This function removes a star from the scoreboard, and lowers the players rating numebr
 function removeStars() {
-    if (moves === 9 || moves === 19 || moves === 29) { // As integers start at 0, setting at 9 19 and 29 will have the code run every 10, 20 or 30 moves.
+    if (moves === 11 || moves === 21 || moves === 31) { // A 3-star rating happens if the came is completed in 10 moves or less, meaning the removal of a star happens at move 11. A star is removed after another 10, so this code will trigger at 19 and 29 moves.
         var star = document.getElementById("star"); // Grabs the ID of the block of code that houses the 3 stars in the scoreboard
         star.parentNode.removeChild(star); // Removes one of the child nodes - in this case, this like of code: "<li id = "star"><i class="fa fa-star"></i></li>"
         rating--; // Subtracts one from the rating of 3
