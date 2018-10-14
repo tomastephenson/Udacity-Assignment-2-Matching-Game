@@ -7,7 +7,7 @@ var openCards = [];
 var matchedCards = [];
 
 var moves = 0; // Move counter
-var movesText = "Moves"; //a variable to display "move" when 1 move is made
+var movesText = "Moves"; //a variable to display "Move" when 1 move is made, and "Moves at all othe times.
 
 // Create the rating system: 
 var stars = document.getElementById("stars"); // Storing the lines of code that displays the stars at the top of the page to be removed later. 
