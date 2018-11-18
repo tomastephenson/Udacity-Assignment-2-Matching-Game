@@ -8,10 +8,6 @@
 * [Dependencies](#dependencies)
 
 ## Installation Instructions
-
-[You can play straight in your browser by clicking this link.](http://htmlpreview.github.io/?https://github.com/tomastephenson/Udacity-Assignment-2-Matching-Game/blob/master/index.html)
-
-Or, to download it on your system, do the folliwing:
 * Click 'Clone or Download' in the top right of the screen, and click 'download zip'.
 * Extract the zip file on your computer
 * Click on index.html to play!
